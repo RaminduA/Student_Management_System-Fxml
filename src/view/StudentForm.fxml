@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="studentFormContext" prefHeight="710.0" prefWidth="1109.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentFormController">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="31.0" layoutY="27.0" onAction="#backToHome" prefHeight="39.0" prefWidth="120.0" style="-fx-background-color: #34495e;" text="Home" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="174.0" layoutY="24.0" prefHeight="58.0" prefWidth="250.0" text="Student Form" textFill="#f50021e3">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <Separator layoutX="419.0" layoutY="34.0" prefHeight="40.0" prefWidth="453.0" />
+      <JFXButton buttonType="RAISED" layoutX="889.0" layoutY="25.0" onAction="#newStudentOnAction" prefHeight="51.0" prefWidth="196.0" style="-fx-background-color: #16a085;" text="+ New Student" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtId" labelFloat="true" layoutX="31.0" layoutY="131.0" onAction="#moveToName" prefHeight="31.0" prefWidth="217.0" promptText="Id" />
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="259.0" layoutY="131.0" onAction="#moveToContact" prefHeight="31.0" prefWidth="536.0" promptText="Name" />
+      <JFXTextField fx:id="txtContact" labelFloat="true" layoutX="808.0" layoutY="131.0" onAction="#moveToAddress" prefHeight="31.0" prefWidth="277.0" promptText="Contact" />
+      <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="31.0" layoutY="191.0" onAction="#moveToSave" prefHeight="31.0" prefWidth="828.0" promptText="Address" />
+      <JFXButton fx:id="btnSaveAndUpdate" buttonType="RAISED" layoutX="899.0" layoutY="184.0" onAction="#saveUpdateOnAction" prefHeight="42.0" prefWidth="139.0" style="-fx-background-color: #3867d6;" text="Save" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblStudent" layoutX="32.0" layoutY="310.0" prefHeight="372.0" prefWidth="1045.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="108.0" text="Id" />
+          <TableColumn fx:id="colName" prefWidth="232.0" text="Name" />
+            <TableColumn fx:id="colContact" prefWidth="265.0" text="Contact" />
+            <TableColumn fx:id="colAddress" prefWidth="319.0" text="Address" />
+            <TableColumn fx:id="colDelete" prefWidth="120.0" text="Delete" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtSearch" labelFloat="true" layoutX="31.0" layoutY="242.0" prefHeight="42.0" prefWidth="1036.0" promptText="Search here" />
+   </children>
+</AnchorPane>
